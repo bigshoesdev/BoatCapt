@@ -1,0 +1,633 @@
+/*
+    <span class="m-switch">
+        <label>
+            <input type="checkbox" checked="checked" name="">
+            <span></span>
+        </label>
+    </span>
+*/
+.m-switch {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.m-switch input:empty {
+    margin-left: -999px;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    opacity: 0 ;
+    filter: alpha(opacity=0) ;
+}
+
+.m-switch input:empty ~ span {
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 1px;
+    text-indent: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.m-switch input:empty ~ span:before, .m-switch input:empty ~ span:after {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+    -webkit-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+}
+
+.m-switch.m-switch--icon input:empty ~ span:after {
+    font-family: "LineAwesome";
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    content: "";
+}
+
+.m-switch.m-switch--icon input:checked ~ span:after {
+    content: '\f17b';
+}
+
+.m-switch.m-switch--icon-check input:checked ~ span:after {
+    font-family: "LineAwesome";
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    content: "";
+}
+
+.m-switch input:empty ~ span {
+    line-height: 30px;
+    margin: 2px 0;
+    height: 30px;
+    width: 57px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.m-switch input:empty ~ span:before, .m-switch input:empty ~ span:after {
+    width: 54px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.m-switch input:empty ~ span:after {
+    height: 24px;
+    width: 24px;
+    line-height: 26px;
+    top: 3px;
+    bottom: 3px;
+    margin-left: 3px;
+    font-size: 0.9em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.m-switch input:checked ~ span:after {
+    margin-left: 26px;
+}
+
+.m-switch.m-switch--lg input:empty ~ span {
+    line-height: 40px;
+    margin: 2px 0;
+    height: 40px;
+    width: 75px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.m-switch.m-switch--lg input:empty ~ span:before, .m-switch.m-switch--lg input:empty ~ span:after {
+    width: 72px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.m-switch.m-switch--lg input:empty ~ span:after {
+    height: 34px;
+    width: 34px;
+    line-height: 34px;
+    top: 3px;
+    bottom: 3px;
+    margin-left: 3px;
+    font-size: 1em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.m-switch.m-switch--lg input:checked ~ span:after {
+    margin-left: 34px;
+}
+
+.m-switch.m-switch--sm input:empty ~ span {
+    line-height: 24px;
+    margin: 2px 0;
+    height: 24px;
+    width: 40px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    border-radius: 12px;
+}
+
+.m-switch.m-switch--sm input:empty ~ span:before, .m-switch.m-switch--sm input:empty ~ span:after {
+    width: 38px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    border-radius: 12px;
+}
+
+.m-switch.m-switch--sm input:empty ~ span:after {
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    top: 2px;
+    bottom: 2px;
+    margin-left: 2px;
+    font-size: 0.8em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.m-switch.m-switch--sm input:checked ~ span:after {
+    margin-left: 16px;
+}
+
+.m-form__group.row .m-switch {
+    margin-top: 0.15rem;
+}
+
+.m-form__group.row .m-switch.m-switch--lg {
+    margin-top: 0rem;
+    position: relative;
+    top: -0.3rem;
+}
+
+.m-form__group.row .m-switch.m-switch--sm {
+    margin-top: 0.3rem;
+}
+
+.m-switch input:empty ~ span:before {
+    background-color: #ebedf2;
+}
+
+.m-switch input:empty ~ span:after {
+    color: #f7f8fa;
+    background-color: #dfe2ea;
+}
+
+.m-switch input:checked ~ span:before {
+    background-color: #ebedf2;
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(235, 237, 242, 0.41) ;
+    -moz-box-shadow: 0px 3px 20px 0px rgba(235, 237, 242, 0.41) ;
+    box-shadow: 0px 3px 20px 0px rgba(235, 237, 242, 0.41) ;
+}
+
+.m-switch input:checked ~ span:after {
+    background-color: #716aca;
+    color: #ffffff;
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(113, 106, 202, 0.41) ;
+    -moz-box-shadow: 0px 3px 20px 0px rgba(113, 106, 202, 0.41) ;
+    box-shadow: 0px 3px 20px 0px rgba(113, 106, 202, 0.41) ;
+}
+
+.m-switch input[disabled] {
+    cursor: not-allowed;
+}
+
+.m-switch input[disabled] ~ span:after, .m-switch input[disabled] ~ span:before {
+    cursor: not-allowed;
+    opacity: 0.7 ;
+    filter: alpha(opacity=70) ;
+}
+
+.m-switch.m-switch--brand:not(.m-switch--outline) input:empty ~ span:before {
+    background-color: #716aca;
+}
+
+.m-switch.m-switch--brand:not(.m-switch--outline) input:empty ~ span:after {
+    color: #716aca;
+    background-color: #ffffff;
+    opacity: 0.4 ;
+    filter: alpha(opacity=40) ;
+}
+
+.m-switch.m-switch--brand:not(.m-switch--outline) input:checked ~ span:before {
+    background-color: #716aca;
+}
+
+.m-switch.m-switch--brand:not(.m-switch--outline) input:checked ~ span:after {
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--outline.m-switch--brand input:empty ~ span:before {
+    border: 2px solid #ebedf2;
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--brand input:empty ~ span:after {
+    color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--brand input:checked ~ span:before {
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--brand input:checked ~ span:after {
+    background-color: #716aca;
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--metal:not(.m-switch--outline) input:empty ~ span:before {
+    background-color: #c4c5d6;
+}
+
+.m-switch.m-switch--metal:not(.m-switch--outline) input:empty ~ span:after {
+    color: #c4c5d6;
+    background-color: #ffffff;
+    opacity: 0.4 ;
+    filter: alpha(opacity=40) ;
+}
+
+.m-switch.m-switch--metal:not(.m-switch--outline) input:checked ~ span:before {
+    background-color: #c4c5d6;
+}
+
+.m-switch.m-switch--metal:not(.m-switch--outline) input:checked ~ span:after {
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--outline.m-switch--metal input:empty ~ span:before {
+    border: 2px solid #ebedf2;
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--metal input:empty ~ span:after {
+    color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--metal input:checked ~ span:before {
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--metal input:checked ~ span:after {
+    background-color: #c4c5d6;
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--light:not(.m-switch--outline) input:empty ~ span:before {
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--light:not(.m-switch--outline) input:empty ~ span:after {
+    color: #ffffff;
+    background-color: #282a3c;
+    opacity: 0.4 ;
+    filter: alpha(opacity=40) ;
+}
+
+.m-switch.m-switch--light:not(.m-switch--outline) input:checked ~ span:before {
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--light:not(.m-switch--outline) input:checked ~ span:after {
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--outline.m-switch--light input:empty ~ span:before {
+    border: 2px solid #ebedf2;
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--light input:empty ~ span:after {
+    color: #282a3c;
+}
+
+.m-switch.m-switch--outline.m-switch--light input:checked ~ span:before {
+    background-color: #282a3c;
+}
+
+.m-switch.m-switch--outline.m-switch--light input:checked ~ span:after {
+    background-color: #ffffff;
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--accent:not(.m-switch--outline) input:empty ~ span:before {
+    background-color: #00c5dc;
+}
+
+.m-switch.m-switch--accent:not(.m-switch--outline) input:empty ~ span:after {
+    color: #00c5dc;
+    background-color: #ffffff;
+    opacity: 0.4 ;
+    filter: alpha(opacity=40) ;
+}
+
+.m-switch.m-switch--accent:not(.m-switch--outline) input:checked ~ span:before {
+    background-color: #00c5dc;
+}
+
+.m-switch.m-switch--accent:not(.m-switch--outline) input:checked ~ span:after {
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--outline.m-switch--accent input:empty ~ span:before {
+    border: 2px solid #ebedf2;
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--accent input:empty ~ span:after {
+    color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--accent input:checked ~ span:before {
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--accent input:checked ~ span:after {
+    background-color: #00c5dc;
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--focus:not(.m-switch--outline) input:empty ~ span:before {
+    background-color: #9816f4;
+}
+
+.m-switch.m-switch--focus:not(.m-switch--outline) input:empty ~ span:after {
+    color: #9816f4;
+    background-color: #ffffff;
+    opacity: 0.4 ;
+    filter: alpha(opacity=40) ;
+}
+
+.m-switch.m-switch--focus:not(.m-switch--outline) input:checked ~ span:before {
+    background-color: #9816f4;
+}
+
+.m-switch.m-switch--focus:not(.m-switch--outline) input:checked ~ span:after {
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--outline.m-switch--focus input:empty ~ span:before {
+    border: 2px solid #ebedf2;
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--focus input:empty ~ span:after {
+    color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--focus input:checked ~ span:before {
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--focus input:checked ~ span:after {
+    background-color: #9816f4;
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--primary:not(.m-switch--outline) input:empty ~ span:before {
+    background-color: #5867dd;
+}
+
+.m-switch.m-switch--primary:not(.m-switch--outline) input:empty ~ span:after {
+    color: #5867dd;
+    background-color: #ffffff;
+    opacity: 0.4 ;
+    filter: alpha(opacity=40) ;
+}
+
+.m-switch.m-switch--primary:not(.m-switch--outline) input:checked ~ span:before {
+    background-color: #5867dd;
+}
+
+.m-switch.m-switch--primary:not(.m-switch--outline) input:checked ~ span:after {
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--outline.m-switch--primary input:empty ~ span:before {
+    border: 2px solid #ebedf2;
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--primary input:empty ~ span:after {
+    color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--primary input:checked ~ span:before {
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--primary input:checked ~ span:after {
+    background-color: #5867dd;
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--success:not(.m-switch--outline) input:empty ~ span:before {
+    background-color: #34bfa3;
+}
+
+.m-switch.m-switch--success:not(.m-switch--outline) input:empty ~ span:after {
+    color: #34bfa3;
+    background-color: #ffffff;
+    opacity: 0.4 ;
+    filter: alpha(opacity=40) ;
+}
+
+.m-switch.m-switch--success:not(.m-switch--outline) input:checked ~ span:before {
+    background-color: #34bfa3;
+}
+
+.m-switch.m-switch--success:not(.m-switch--outline) input:checked ~ span:after {
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--outline.m-switch--success input:empty ~ span:before {
+    border: 2px solid #ebedf2;
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--success input:empty ~ span:after {
+    color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--success input:checked ~ span:before {
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--success input:checked ~ span:after {
+    background-color: #34bfa3;
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--info:not(.m-switch--outline) input:empty ~ span:before {
+    background-color: #36a3f7;
+}
+
+.m-switch.m-switch--info:not(.m-switch--outline) input:empty ~ span:after {
+    color: #36a3f7;
+    background-color: #ffffff;
+    opacity: 0.4 ;
+    filter: alpha(opacity=40) ;
+}
+
+.m-switch.m-switch--info:not(.m-switch--outline) input:checked ~ span:before {
+    background-color: #36a3f7;
+}
+
+.m-switch.m-switch--info:not(.m-switch--outline) input:checked ~ span:after {
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--outline.m-switch--info input:empty ~ span:before {
+    border: 2px solid #ebedf2;
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--info input:empty ~ span:after {
+    color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--info input:checked ~ span:before {
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--info input:checked ~ span:after {
+    background-color: #36a3f7;
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--warning:not(.m-switch--outline) input:empty ~ span:before {
+    background-color: #ffb822;
+}
+
+.m-switch.m-switch--warning:not(.m-switch--outline) input:empty ~ span:after {
+    color: #ffb822;
+    background-color: #111111;
+    opacity: 0.4 ;
+    filter: alpha(opacity=40) ;
+}
+
+.m-switch.m-switch--warning:not(.m-switch--outline) input:checked ~ span:before {
+    background-color: #ffb822;
+}
+
+.m-switch.m-switch--warning:not(.m-switch--outline) input:checked ~ span:after {
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--outline.m-switch--warning input:empty ~ span:before {
+    border: 2px solid #ebedf2;
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--warning input:empty ~ span:after {
+    color: #111111;
+}
+
+.m-switch.m-switch--outline.m-switch--warning input:checked ~ span:before {
+    background-color: #111111;
+}
+
+.m-switch.m-switch--outline.m-switch--warning input:checked ~ span:after {
+    background-color: #ffb822;
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--danger:not(.m-switch--outline) input:empty ~ span:before {
+    background-color: #f4516c;
+}
+
+.m-switch.m-switch--danger:not(.m-switch--outline) input:empty ~ span:after {
+    color: #f4516c;
+    background-color: #ffffff;
+    opacity: 0.4 ;
+    filter: alpha(opacity=40) ;
+}
+
+.m-switch.m-switch--danger:not(.m-switch--outline) input:checked ~ span:before {
+    background-color: #f4516c;
+}
+
+.m-switch.m-switch--danger:not(.m-switch--outline) input:checked ~ span:after {
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--outline.m-switch--danger input:empty ~ span:before {
+    border: 2px solid #ebedf2;
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--danger input:empty ~ span:after {
+    color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--danger input:checked ~ span:before {
+    background-color: #ffffff;
+}
+
+.m-switch.m-switch--outline.m-switch--danger input:checked ~ span:after {
+    background-color: #f4516c;
+    opacity: 1 ;
+    filter: alpha(opacity=100) ;
+}
+
+.m-switch.m-switch--sm input:empty ~ span{width: 48px;}
+.m-switch.m-switch--sm input:empty ~ span:before{width: 46px;}
+.m-switch.m-switch--sm input:checked ~ span:after{margin-left: 23.5px;}
+.m-switch.m-switch--sm input:empty ~ span:after{padding-top: 3px;padding-left: 1px;}
+.m-switch.m-switch--icon input:empty ~ span:after{content: "\f00c";font: normal normal normal 14px/1 FontAwesome;}
+.m-switch.m-switch--info:not(.m-switch--outline) input:empty ~ span:after{opacity: 1;}
+.m-switch.m-switch--info:not(.m-switch--outline) input:empty:not(:checked) ~ span:before{background-color: #f3f3f3;border: 1px solid #dcdcdc;}
+.m-switch.m-switch--info:not(.m-switch--outline) input:empty:checked ~ span:before{background-color: #36a3f7;border-color: #36a3f7;}
+.m-switch.m-switch--info input:empty ~ span:after{border: 1px solid #dcdcdc;}
+.m-switch.m-switch--info input:empty:checked ~ span:after{border-color: transparent;}
+.m-switch.m-switch--icon input:empty:not(:checked) ~ span:after{content: "";}
